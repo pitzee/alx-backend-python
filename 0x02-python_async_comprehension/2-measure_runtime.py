@@ -9,7 +9,6 @@ import asyncio
 async_comprehension = __import__('1-async_comprehension').async_comprehension
 
 
-
 async def measure_runtime() -> float:
     """
     Collect 10 random numbers using an async comprehensing,
@@ -17,5 +16,5 @@ async def measure_runtime() -> float:
     """
     start: float = time.perf_counter()
     await asyncio.gather(*(async_comprehension() for i in range(4)))
-    end : float = time.perf_counter()
+    end: float = time.perf_counter()
     return (end - start)
